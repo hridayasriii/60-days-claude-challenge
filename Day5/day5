@@ -1,0 +1,92 @@
+# Day 5 – Context Engineering
+
+## Objective
+
+Learn how providing context improves AI-generated responses.
+
+---
+
+## Prompt A (Without Context)
+
+```text
+Create a 30-day learning roadmap.
+
+Include:
+- Weekly milestones
+- Daily tasks
+- Resources
+- Projects
+- Final outcome
+
+Make it practical and beginner-friendly.
+```
+
+### Observation
+
+- Generic roadmap
+- Suitable for any beginner
+- No personalization
+
+---
+
+## Prompt B (With Context)
+
+```text
+Create a 30-day learning roadmap.
+
+Context:
+- Current Situation: First-year B.Tech CSE Student
+- Current Skills: C++, HTML, CSS, JavaScript, React, Node.js, Git, GitHub, Basic SQL, Basic DSA
+- Goal: Become a Software Engineer and get a product-based internship
+- Available Time: 3 Hours per Day
+- Experience Level: Beginner
+- Preferred Learning Style: Projects + Videos
+
+Include:
+- Weekly milestones
+- Daily tasks
+- Resources
+- Projects
+- Final outcome
+
+Make it practical and beginner-friendly.
+```
+
+---
+
+## Comparison
+
+### 1. Which roadmap feels more personalized?
+
+Prompt B (With Context).
+
+### 2. Which roadmap would you actually follow?
+
+Prompt B because it matches my current skills, available time, and career goal.
+
+### 3. What role did context play in improving the result?
+
+Adding context helped Claude generate a roadmap that was specific, practical, and tailored to my learning needs instead of providing a generic plan.
+
+---
+
+## Key Learnings
+
+- Context improves AI responses.
+- Personalized prompts produce better results.
+- AI gives more relevant recommendations when it knows the user's background and goals.
+- Better context leads to better planning.
+
+---
+
+## Files Included
+
+- Prompt A file
+- Prompt B file
+
+---
+
+## Tools Used
+
+- Claude AI
+- GitHub
