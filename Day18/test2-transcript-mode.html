@@ -1,0 +1,125 @@
+<style>
+  :root{--bg:#f6f7fb;--card:#ffffff;--ink:#161a2b;--sub:#5a6072;--line:#e6e8f0;--accent:#5b5bf6;--accent-soft:#eeeeff;
+  --red:#ef4444;--red-bg:#fef2f2;--orange:#f59e0b;--orange-bg:#fffaeb;--green:#10b981;--green-bg:#ecfdf5;
+  --purple:#8b5cf6;--purple-bg:#f5f3ff;--teal:#0891b2;--teal-bg:#ecfeff;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;background:var(--bg);color:var(--ink);}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px;}
+  header.top h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em;}
+  header.top p{margin:0;color:var(--sub);font-size:14px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .grid2{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:760px){.grid,.grid2{grid-template-columns:1fr;}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 2px rgba(20,20,50,.04);transition:box-shadow .15s,transform .15s;}
+  .card:hover{box-shadow:0 6px 20px rgba(30,30,80,.08);transform:translateY(-1px);}
+  section{margin-top:26px;}
+  section h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--sub);margin:0 0 12px;}
+  .badge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .b-high{background:var(--red-bg);color:var(--red);}
+  .b-med{background:var(--orange-bg);color:var(--orange);}
+  .b-conflict{background:var(--red-bg);color:var(--red);}
+  .b-open{background:var(--purple-bg);color:var(--purple);}
+  .b-pending{background:var(--accent-soft);color:var(--accent);}
+  .speaker{display:inline-block;background:var(--teal-bg);color:var(--teal);font-weight:700;font-size:12px;padding:3px 10px;border-radius:999px;margin-bottom:8px;}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  th,td{text-align:left;padding:12px 14px;font-size:14px;border-bottom:1px solid var(--line);}
+  th{background:#fafbff;color:var(--sub);font-size:12px;text-transform:uppercase;letter-spacing:.05em;}
+  tr:last-child td{border-bottom:none;}
+  .action-hero{border:1px solid var(--accent);background:linear-gradient(180deg,#f2f2ff,#ffffff);}
+  .muted{color:var(--sub);font-style:italic;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:600;font-size:14px;}
+  .item{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .item:last-child{border-bottom:none;}
+  .item b{display:block;margin-bottom:2px;}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Q3 Marketing Budget — Meeting Breakdown</h1>
+    <p>Transcript Mode · Sarah, Marcus, Jenny</p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="card">
+      Meeting to review the Q3 marketing budget after a projected $40k overspend on paid social. Group agreed on a
+      spend cut as a buffer, discussed whether an email campaign can offset it, and flagged an unresolved analytics
+      attribution bug that needs to be fixed before the board presentation on the 28th.
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Takeaways</h2>
+    <div class="grid">
+      <div class="card"><b>$40k projected overspend</b><br><span class="muted">On the current paid social pace, per Marcus's numbers.</span></div>
+      <div class="card"><b>15% paid social cut agreed</b><br><span class="muted">Starting next week, as a buffer against the overspend.</span></div>
+      <div class="card"><b>⚠️ Attribution bug unresolved</b><br><span class="muted">Wrong attribution numbers for the affiliate channel; needs fixing before the board meeting on the 28th.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>👥 Speaker Summary</h2>
+    <div class="grid2">
+      <div class="card"><span class="speaker">SARAH</span><br>Ran the meeting, pushed for a decision on the overspend, assigned Marcus and Jenny their action items, and raised the unresolved analytics attribution issue tied to the board presentation.</div>
+      <div class="card"><span class="speaker">MARCUS</span><br>Reported the $40k projected overspend on paid social, agreed to cut spend by 15% starting next week, and noted he isn't sure who at IT is handling the attribution bug.</div>
+      <div class="card"><span class="speaker">JENNY</span><br>Confirmed the email campaign templates are done but the freelancer's subject line copy has no ETA yet. Agreed to own following up with the freelancer, and confirmed the attribution bug isn't resolved.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>✅ Decisions by Speaker</h2>
+    <div class="grid2">
+      <div class="card"><span class="speaker">SARAH</span><br>Decided: Marcus cuts paid social spend by 15% as a buffer. Decided: flag the attribution bug as an open item that must be resolved before the board presentation on the 28th.</div>
+      <div class="card"><span class="speaker">MARCUS</span><br>Agreed to the 15% paid social cut.</div>
+      <div class="card"><span class="speaker">JENNY</span><br>Agreed to own the freelancer follow-up.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎯 Action Items by Speaker</h2>
+    <div class="card action-hero">
+      <table>
+        <tr><th>Task</th><th>Owner</th><th>Deadline</th><th>Status</th></tr>
+        <tr><td>Cut paid social spend by 15%</td><td>Marcus</td><td>Starting next week</td><td><span class="badge b-pending">⏳ Pending</span></td></tr>
+        <tr><td>Follow up with freelancer for subject line copy ETA</td><td>Jenny</td><td>End of week</td><td><span class="badge b-pending">⏳ Pending</span></td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>📝 Attribution Notes</h2>
+    <div class="card" style="border-color:var(--purple);background:var(--purple-bg);">
+      The analytics attribution bug (wrong numbers for the affiliate channel) has no clearly assigned owner. Marcus
+      believes IT is looking into it but explicitly said he isn't sure who exactly — so no individual owner is
+      recorded here. This should be assigned before the board presentation on the 28th.
+    </div>
+  </section>
+
+  <section>
+    <h2>❓ Open Questions</h2>
+    <details open>
+      <summary>1 open item</summary>
+      <div class="item"><b>Who owns fixing the analytics attribution bug? <span class="badge b-open">❓ Open Question</span></b>Unresolved as of this meeting; needs an owner and a fix before the board presentation on the 28th.</div>
+    </details>
+  </section>
+
+  <section>
+    <h2>⚠️ Risks / Blockers</h2>
+    <details open>
+      <summary>2 items</summary>
+      <div class="item"><b>$40k projected overspend on paid social <span class="badge b-high">🔴 High Priority</span></b>Basis for the spend-cut decision.</div>
+      <div class="item"><b>Freelancer subject line copy has no ETA</b>Risk to the email campaign's ability to offset the paid social overspend as planned.</div>
+    </details>
+  </section>
+
+  <section>
+    <h2>⚠️ Conflicts</h2>
+    <div class="card"><span class="muted">None noted in this transcript.</span></div>
+  </section>
+
+  <section>
+    <h2>Additional Notes</h2>
+    <div class="card">Email campaign templates are complete; only the freelancer subject line copy is outstanding.</div>
+  </section>
+</div>

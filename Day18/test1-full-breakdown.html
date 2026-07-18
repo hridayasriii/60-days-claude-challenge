@@ -1,0 +1,136 @@
+<style>
+  :root{--bg:#f6f7fb;--card:#ffffff;--ink:#161a2b;--sub:#5a6072;--line:#e6e8f0;--accent:#5b5bf6;--accent-soft:#eeeeff;
+  --red:#ef4444;--red-bg:#fef2f2;--orange:#f59e0b;--orange-bg:#fffaeb;--green:#10b981;--green-bg:#ecfdf5;
+  --purple:#8b5cf6;--purple-bg:#f5f3ff;}
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;background:var(--bg);color:var(--ink);}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 60px;}
+  header.top{margin-bottom:24px;}
+  header.top h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em;}
+  header.top p{margin:0;color:var(--sub);font-size:14px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  @media(max-width:760px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 1px 2px rgba(20,20,50,.04);transition:box-shadow .15s,transform .15s;}
+  .card:hover{box-shadow:0 6px 20px rgba(30,30,80,.08);transform:translateY(-1px);}
+  section{margin-top:26px;}
+  section h2{font-size:15px;text-transform:uppercase;letter-spacing:.08em;color:var(--sub);margin:0 0 12px;display:flex;align-items:center;gap:8px;}
+  .badge{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .b-high{background:var(--red-bg);color:var(--red);}
+  .b-med{background:var(--orange-bg);color:var(--orange);}
+  .b-low{background:var(--green-bg);color:var(--green);}
+  .b-conflict{background:var(--red-bg);color:var(--red);}
+  .b-open{background:var(--purple-bg);color:var(--purple);}
+  .b-pending{background:var(--accent-soft);color:var(--accent);}
+  .b-done{background:var(--green-bg);color:var(--green);}
+  table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+  th,td{text-align:left;padding:12px 14px;font-size:14px;border-bottom:1px solid var(--line);}
+  th{background:#fafbff;color:var(--sub);font-size:12px;text-transform:uppercase;letter-spacing:.05em;}
+  tr:last-child td{border-bottom:none;}
+  .action-hero{border:1px solid var(--accent);background:linear-gradient(180deg,#f2f2ff,#ffffff);}
+  .muted{color:var(--sub);font-style:italic;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px;}
+  details summary{cursor:pointer;font-weight:600;font-size:14px;}
+  details[open] summary{margin-bottom:8px;}
+  .item{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .item:last-child{border-bottom:none;}
+  .item b{display:block;margin-bottom:2px;}
+  .tag-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px;}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Mobile App Redesign — Planning Session Breakdown</h1>
+    <p>Full Breakdown · organized from a single note</p>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <div class="card">
+      Notes from a product planning session on the mobile app redesign, covering onboarding flow length, checkout
+      abandonment, the wishlist feature's future, a search bug, and next steps — with one flagged discrepancy
+      about the checkout redesign launch date.
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Takeaways</h2>
+    <div class="grid">
+      <div class="card"><b>Onboarding is too long</b><br><span class="muted">7 screens today, target is 3–4. Disagreement on whether to keep any welcome screen.</span></div>
+      <div class="card"><b>Cart abandonment at 68%</b><br><span class="muted">Suspected cause: forced account creation. Called out as biggest lever for Q3 revenue.</span></div>
+      <div class="card"><b>Wishlist usage is polarized</b><br><span class="muted">Only 2% of MAU use it, but that segment uses it heavily. No decision made.</span></div>
+      <div class="card"><b>Search bug, unclear owner</b><br><span class="muted">Stale results reported by 4 users in Discord. Ownership unclear since Wei left.</span></div>
+      <div class="card"><b>⚠️ Launch date conflict</b><br><span class="muted">Checkout redesign date differs between what was said and a follow-up email.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🎯 Action Items</h2>
+    <div class="card action-hero">
+      <table>
+        <tr><th>Task</th><th>Owner</th><th>Deadline</th><th>Status</th></tr>
+        <tr>
+          <td>Mock up shorter onboarding flow</td>
+          <td>I <span class="tag-row"><span class="badge b-pending">⏳ Pending</span></span></td>
+          <td>Friday</td>
+          <td><span class="badge b-pending">⏳ Pending</span></td>
+        </tr>
+        <tr>
+          <td>Pull cart abandonment data broken down by device type</td>
+          <td>Priya</td>
+          <td>Not specified</td>
+          <td><span class="badge b-pending">⏳ Pending</span></td>
+        </tr>
+        <tr>
+          <td>Test making account creation optional at checkout <span class="badge b-high">🔴 High Priority</span></td>
+          <td>Not specified</td>
+          <td>ASAP (as stated)</td>
+          <td><span class="badge b-pending">⏳ Pending</span></td>
+        </tr>
+        <tr>
+          <td>Own search bug triage</td>
+          <td>Not specified</td>
+          <td>Not specified</td>
+          <td><span class="badge b-pending">⏳ Pending</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>❓ Open Questions</h2>
+    <details open>
+      <summary>4 open items</summary>
+      <div class="item"><b>Welcome screen vs. no welcome screen <span class="badge b-open">❓ Open Question</span></b>Priya wants to drop the tutorial carousel for progressive disclosure; marketing (Dave?) wants some kind of welcome screen for brand reasons. Not resolved.</div>
+      <div class="item"><b>Keep the wishlist feature?</b>Flagged, not decided. 2% of MAU use it, but heavily.</div>
+      <div class="item"><b>Which checkout launch date is correct?</b>End of Q3 vs. August 15 — needs verification before telling leadership.</div>
+      <div class="item"><b>Who owns search now?</b>Ownership unclear since Wei left.</div>
+    </details>
+  </section>
+
+  <section>
+    <h2>⚠️ Risks / Blockers</h2>
+    <details open>
+      <summary>2 items</summary>
+      <div class="item"><b>Cart abandonment at 68% <span class="badge b-high">🔴 High Priority</span></b>Described as urgent and the biggest lever for Q3 revenue. Suspected cause: forced account creation.</div>
+      <div class="item"><b>No clear search bug owner</b>Blocks triage of a bug already reported by 4 users; ownership gap since Wei left.</div>
+    </details>
+  </section>
+
+  <section>
+    <h2>⚠️ Conflicts</h2>
+    <div class="card" style="border-color:var(--red);background:var(--red-bg);">
+      <span class="badge b-conflict">⚠️ Conflict</span>
+      <div style="margin-top:8px;">Checkout redesign launch date was stated as <b>end of Q3</b> in the note, but a follow-up email to the team said <b>August 15th</b>. Source explicitly flags this needs to be double-checked before communicating to leadership.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Additional Notes</h2>
+    <div class="card">
+      <ul style="margin:0;padding-left:18px;">
+        <li>Wishlist: 2% of MAU use the feature, but usage among that segment is described as heavy.</li>
+        <li>Search bug reported by roughly 4 users in the Discord.</li>
+      </ul>
+    </div>
+  </section>
+</div>
